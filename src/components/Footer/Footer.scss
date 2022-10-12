@@ -1,0 +1,38 @@
+.Footer{
+    position: absolute;
+    bottom: 0;
+    height: 10vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: #291B44;
+
+    button{
+        font-family: 'Bree Serif', serif;
+        color: aliceblue;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: color .3s;
+
+        &:hover{
+            color: #dbdbdb;
+        }
+    }
+
+
+    .leftSide-footer-button{
+        i{
+            transition: rotate .3s ease-in-out;
+        }
+
+        &:hover i{
+            rotate: 360deg;
+        }
+    }
+}
