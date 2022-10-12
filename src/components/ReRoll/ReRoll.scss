@@ -1,0 +1,19 @@
+.ReRoll{
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    cursor: pointer;
+
+    i{
+        font-size: 2rem;
+    }
+
+    &:hover i{
+        color: #000;
+    }
+
+}

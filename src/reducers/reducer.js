@@ -7,19 +7,27 @@ import {
     colors: [
       {
           id: 1,
-          colorValue: "#69CB28"
+          colorValue: "#AC90EB"
       },
       {
           id: 2,
-          colorValue: "#457B55"
+          colorValue: "#8C52FF"
       },
       {
           id: 3,
-          colorValue: "#71B8D0"
+          colorValue: "#FFBD59"
       },
       {
           id: 4,
-          colorValue: "#CA472D"
+          colorValue: "#5E17EB"
+      },
+      {
+        id: 5,
+        colorValue: "#D89191"
+      },
+      {
+        id: 6,
+        colorValue: "#CB6CE6"
       },
     ],
   };
