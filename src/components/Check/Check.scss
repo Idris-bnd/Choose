@@ -1,6 +1,6 @@
-.ReRoll{
-    height: 3rem;
-    width: 3rem;
+.Check{
+    height: fit-content;
+    width: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +9,7 @@
     cursor: pointer;
 
     i{
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     &:hover i{

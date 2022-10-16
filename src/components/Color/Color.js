@@ -1,18 +1,17 @@
 import React from 'react';
 import Delete from '../Delete/Delete';
-import ReRoll from '../ReRoll/ReRoll';
+import Check from '../Check/Check';
 import './Color.scss';
 
 
-function Color({ classH, colorH }) {
-
+function Color({ classH, colorH, index, checkH, setCheck, deleteFunction }) {
 
   return(
     <div style={{ backgroundColor: colorH}} className={'Color colorNum'+classH}>
        {colorH}
        <div className="save-delete">
-        <ReRoll colorH={colorH} idH={classH} />
-        <Delete idH={classH} />
+        <Check index={index} colorH={colorH} checkH={checkH} setCheck={setCheck} />
+        <Delete deleteFunction={deleteFunction} index={index} />
        </div>
     </div>
  )

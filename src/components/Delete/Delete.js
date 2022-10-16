@@ -2,14 +2,14 @@ import React from 'react';
 import './Delete.scss';
 
 
-function Delete({ idH }) {
+function Delete({ index, deleteFunction }) {
 
-    const handleClick = (e) => {
-        console.log(idH);
+    const handleClick = () => {
+      deleteFunction(index)
     }
 
   return(
-    <div id={idH} className='Delete'>
+    <div id={index} className='Delete'>
        <i onClick={handleClick} className="fa-solid fa-xmark"></i>
     </div>
  )
