@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Check.scss';
-
+import PropTypes from 'prop-types';
 
 function Check({ colorH, index, checkH, setCheck }) {
    const handleClick = (e) => {
@@ -13,4 +13,13 @@ function Check({ colorH, index, checkH, setCheck }) {
     </div>
  )
 }
+
+Check.propTypes = {
+   colorH: PropTypes.string.isRequired,
+   index: PropTypes.number.isRequired,
+   checkH: PropTypes.bool.isRequired,
+
+   setCheck: PropTypes.func.isRequired,
+};
+
 export default Check;

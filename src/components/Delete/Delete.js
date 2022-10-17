@@ -1,5 +1,6 @@
 import React from 'react';
 import './Delete.scss';
+import PropTypes from 'prop-types';
 
 
 function Delete({ index, deleteFunction }) {
@@ -14,4 +15,11 @@ function Delete({ index, deleteFunction }) {
     </div>
  )
 }
+
+Delete.propTypes = {
+  index: PropTypes.number.isRequired,
+
+  deleteFunction: PropTypes.func.isRequired,
+};
+
 export default Delete;

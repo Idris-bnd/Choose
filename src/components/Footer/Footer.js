@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.scss';
+import PropTypes from 'prop-types';
 
 
 function Footer({ changeAll, add1 }) {
@@ -7,12 +8,15 @@ function Footer({ changeAll, add1 }) {
     const handleClick = (e) => {
         switch (e.target.name) {
             case 'CHANGE_ALL':
-                console.log('change');
                 changeAll()
             break;
             case 'ADD_1_COLOR':
-                console.log('add');
                 add1()
+                console.log(window.innerHeight);
+                if (window.innerWidth < 1024) {
+                    console.log(document.body.scrollHeight);
+                    window.scrollTo(0, document.body.scrollHeight);
+                }
             break;
             default:
                 break;
@@ -34,4 +38,11 @@ function Footer({ changeAll, add1 }) {
     </footer>
  )
 }
+
+
+Footer.propTypes = {
+    changeAll: PropTypes.func.isRequired,
+    add1: PropTypes.func.isRequired,
+};
+
 export default Footer;

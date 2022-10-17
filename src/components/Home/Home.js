@@ -89,13 +89,34 @@ function Home() {
          });
       }
    }
+
+   const RerollFunction = (index) => {
+      const randomColor = (Math.floor(Math.random()*0xFFFFFF)).toString(16).toUpperCase();
+      const colorsArrayBis = colorsArray.colors;
+
+      colorsArrayBis.find((color) => color.id === index)
+
+      const colorTo = colorsArrayBis[index];
+         colorsArrayBis.splice(index, 1, {
+            colorValue : '#'+randomColor,
+            check : false
+         })
+      setColorsArray({
+         colors: colorsArrayBis
+      });
+   }
   
 
   return(
     <section className='Home'>
        <Header />
-       <Colors colorsArray={colorsArray.colors} setCheck={setCheck} deleteFunction={delete1} />
-       <Footer colorsArray={colorsArray.colors} changeAll={changeAll} add1={add1} />
+       <Colors
+         colorsArray={colorsArray.colors}
+         setCheck={setCheck}
+         deleteFunction={delete1}
+         RerollFunc={RerollFunction}
+      />
+       <Footer changeAll={changeAll} add1={add1} />
     </section>
  )
 }

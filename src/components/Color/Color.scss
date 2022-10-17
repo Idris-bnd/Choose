@@ -1,4 +1,5 @@
 .Color{
+    padding: 2rem 1rem;
     width: 100%;
     height: 100%;
 
@@ -6,10 +7,49 @@
     flex-direction: column;
     align-items: center;
     justify-content: end;
+    
+    .colorText{
+        font-size: 2rem;
+        font-family: 'Bree Serif', serif;
+        margin-bottom: .5rem;
+        color: rgb(0, 0, 0);
+    }
+
+    .select{
+        margin-bottom: 3rem;
+        color: #000;
+    }
+
+    .fa-copy{
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        cursor: pointer;
+    }
 
 
     .save-delete{
         display: flex;
         gap: 1rem;
+        margin-bottom: 5rem;
+    }
+
+    .copied{
+        animation: colorCopied 1s;
+        transition: color .2s;
+    }
+}
+
+@keyframes colorCopied {
+    25%{
+        color: #ffffff;
+    }
+    30%{
+        color: #000000;
+    }
+    95%{
+        color: #ffffff;
+    }
+    100%{
+        color: #000000;
     }
 }
